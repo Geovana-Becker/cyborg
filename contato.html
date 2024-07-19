@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="icon" type="img/jpg" href="assets/images/nave.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Cyborg - Paixão pela música</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-cyborg-gaming.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+<!--
+
+TemplateMo 579 Cyborg Gaming
+
+https://templatemo.com/tm-579-cyborg-gaming
+
+-->
+  </head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="index.html" class="logo">
+                        <img src="assets/images/logo.png" alt="">
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="sobre.html">Sobre nós</a></li>
+                        <li><a href="genero.html">Gêneros</a></li>
+                        <li><a href="epoca.html">Épocas</a></li>
+                        <li><a href="cantores.html">Cantores</a></li>
+                        <li><a href="contato.html" class="active">Registros<img src="assets/images/profile-header.jpg" alt=""></a></li>
+                    </ul>   
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="page-content">
+
+          <!-- ***** Featured Games Start ***** -->
+          <div class="row">
+            <div class="col-lg-8">
+              <div class="featured-games header-text">
+                <div class="heading-section">
+                  <h4>Músicas e Gêneros Favoritos de Nossos Usuários</h4>
+                  <div id="meu-conteudo">
+                  <center><table id="tabela">
+                    <thead>
+                        <tr>
+                            <td id="espaco_nome">Nome</td>
+                            <td id="espaco_musica">Música</td>
+                            <td id="espaco_genero">Gênero Musical </td>
+                        </tr>
+                        <tr>
+                            <td id="espaco_nome2"></td>
+                            <td id="espaco_musica2"></td>
+                            <td id="espaco_genero2"></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+        
+                    </tbody>
+                </table>
+            </div>
+                </center>
+                </div>
+              </div>
+            </div>
+           	
+			
+			
+			
+			
+            <div class="col-lg-4">
+              <div class="top-downloaded">
+                <div class="heading-section">
+                  <h4><center>Participe Também!</center></h4>
+                </div>
+                <!-- ***** API Start ***** -->
+                <div id="meu-conteudo">
+                    Digite seu Nome:<br/>
+                    <input type="text" id="nomeInput">
+                    <br/><br/>
+                    Sua Música Favorita:<br/>
+                    <input type="text" id="musicaInput">
+                    <br/><br/>
+                    Seu Gênero Musical Favorito:<br/>
+                    <input type="text" id="generoInput">
+                    <br/><br/>
+					 <button type="button" onclick="limpar()" id="btnSalvar">Limpar</button>
+                    <button type="button" onclick="jason()" id="btnSalvar">Salvar</button>
+        
+                    </div>
+            </div>
+          </div>
+		   
+        
+
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <p>Copyright © 2023 <a href="#">Cyborg </a>. Todos os direitos reservados. - Site para uso acadêmico.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/tabs.js"></script>
+  <script src="assets/js/popup.js"></script>
+  <script src="assets/js/custom.js"></script>
+
+  <script>
+    const tabela = document.getElementById('tabela');
+  const tbody = tabela.querySelector('tbody');
+  let i = 0;
+  tbody.innerHTML = '';
+  
+  
+  function limpar(){
+    document.getElementById("nomeInput").value = '';
+    document.getElementById("musicaInput").value = '';
+    document.getElementById("generoInput").value = '';
+  }
+
+
+  function jason(){
+
+      let nome = document.getElementById("nomeInput").value;
+      let musica = document.getElementById("musicaInput").value;
+      let genero = document.getElementById("generoInput").value;
+
+      
+      fetch('https://jsonplaceholder.typicode.com/posts', {
+        method: 'POST',
+        body: JSON.stringify({
+          title: nome,
+          body: musica,
+          userId: genero,
+        }),
+        headers: {
+          'Content-type': 'application/json; charset=UTF-8',
+        },
+      })
+      .then((response) => response.json())
+      .then(json => {
+        let nome = json.title;
+        localStorage.setItem("nome", nome);
+
+        const row = document.createElement('tr');
+
+        const cNome = document.createElement('td');
+        cNome.textContent = json.title;
+        row.appendChild(cNome);
+
+        const cMusica = document.createElement('td');
+        cMusica.textContent = json.body;
+        row.appendChild(cMusica);
+
+        const cGenero = document.createElement('td');
+        cGenero.textContent = json.userId;
+        row.appendChild(cGenero);
+
+        tbody.appendChild(row);
+  });
+
+  }
+</script>
+  </body>
+
+</html>

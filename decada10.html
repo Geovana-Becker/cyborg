@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="icon" type="img/jpg" href="assets/images/nave.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Cyborg - Paixão pela música</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-cyborg-gaming.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+<!--
+
+TemplateMo 579 Cyborg Gaming
+
+https://templatemo.com/tm-579-cyborg-gaming
+
+-->
+  </head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="index.html" class="logo">
+                        <img src="assets/images/logo.png" alt="">
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                   
+                    <!-- ***** Search End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="sobre.html">Sobre nós</a></li>
+                        <li><a href="genero.html">Gêneros</a></li>
+                        <li><a href="epoca.html" class="active">Épocas</a></li>
+                        <li><a href="cantores.html">Cantores</a></li>
+                       <li><a href="contato.html">Registros<img src="assets/images/profile-header.jpg" alt=""></a></li>
+                    </ul>   
+					<a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="page-content">
+
+          <!-- ***** api Start ***** -->
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="main-profile ">
+                <div class="row">
+                  <div class="col-lg-4">
+                    <img src="assets/images/game-05.jpg" alt="" style="border-radius: 23px;">
+                  </div>
+                  <div class="col-lg-4 align-self-center">
+                    <div class="main-info header-text">
+                      <span></span>
+                      <h4>Década 2010</h4>
+                      <p>Os anos 2010 foram marcados por uma fusão de gêneros, um acesso sem precedentes à música através da internet e uma crescente interconexão global de artistas e fãs. Foi uma época em que as estrelas do pop reinaram supremas, enquanto novos gêneros e movimentos musicais emergiam das margens para o mainstream. </p>
+                      
+                    </div>
+                  </div>
+                  <div class="col-lg-4 align-self-center">
+                    <ul>
+                      <li  style="color: white">Século: <span>XXI</span></li>
+                      <li  style="color: white">Gêneros famosos: <span> Pop, rock e MPB</span></li>
+                      <li  style="color: white">Cantores no auge: <span>Katy Perry e Justin Bieber </span></li>
+                      <li> <span></span></li>
+                    </ul>
+                  </div>
+                </div>
+                <center>
+               <div class="col-lg-12">
+                  <div class="main-button">
+                  <a href="epoca.html">Épocas</a>
+                </div>
+				</center>
+              </div>
+            </div>
+          </div>
+          <!-- ***** api End ***** -->
+
+          <!-- ***** iframe Start ***** -->
+          <div class="gaming-library profile-library">
+            <div class="col-lg-12">
+              <div class="heading-section">
+                <h4><em>Playlists da</em> Década</h4>
+              </div>
+              <!-- aqui-->
+              <div class="embed-spotify">
+                <div class="col-lg-12">
+                  <script src="https://open.spotify.com/embed-podcast/iframe-api/v1" async></script>
+                  <div id="embed-iframe"></div>
+                      <div class="main-button">
+                          <button class="main-button" data-spotify-id="spotify:playlist:37i9dQZF1DX5Ejj0EkURtP">
+                              Segunda playlist
+                          </button>
+                          <button class="main-button" data-spotify-id="spotify:album:5XpEKORZ4y6OrCZSKsi46A">
+                              primeira playlist
+                          </button>
+                      </div>
+                  <script type="text/javascript">
+                  window.onSpotifyIframeApiReady = (IFrameAPI) => {
+                    const element = document.getElementById('embed-iframe');
+                    const options = {
+                        width: '100%',
+                        height: '375px',
+                        uri: 'spotify:album:5XpEKORZ4y6OrCZSKsi46A'
+                    };
+                    const callback = (EmbedController) => {
+                        document.querySelectorAll('.main-button').forEach(
+                            episode => {
+                                episode.addEventListener('click', () => {
+                                    EmbedController.loadUri(episode.dataset.spotifyId)
+                                });
+                            })
+                    };
+                    IFrameAPI.createController(element, options, callback);
+                };
+              </script>
+              </div>
+              </div>
+            </div>
+          </div>
+          <!-- ***** iframe End ***** -->
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <p>Copyright © 2023 <a href="#">Cyborg </a>. Todos os direitos reservados. - Site para uso acadêmico.
+          
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/tabs.js"></script>
+  <script src="assets/js/popup.js"></script>
+  <script src="assets/js/custom.js"></script>
+
+
+  </body>
+
+</html>
