@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="icon" type="img/jpg" href="assets/images/nave.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Cyborg - Paixão pela música</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-cyborg-gaming.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+<!--
+
+TemplateMo 579 Cyborg Gaming
+
+https://templatemo.com/tm-579-cyborg-gaming
+
+-->
+  </head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="index.html" class="logo">
+                        <img src="assets/images/logo.png" alt="">
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                   
+                    <!-- ***** Search End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="sobre.html">Sobre nós</a></li>
+                        <li><a href="genero.html" class="active">Gêneros</a></li>
+                        <li><a href="epoca.html">Épocas</a></li>
+                        <li><a href="cantores.html">Cantores</a></li>
+                        <li><a href="contato.html">Registros<img src="assets/images/profile-header.jpg" alt=""></a></li>
+                    </ul>   
+					<a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="page-content">
+
+          <!-- ***** api Start ***** -->
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="main-profile ">
+                <div class="row">
+                  <div class="col-lg-4">
+                    <img src="assets/images/game-04.jpg" alt="" style="border-radius: 23px;">
+                  </div>
+                  <div class="col-lg-4 align-self-center">
+                    <div class="main-info header-text">
+                      <span></span>
+                      <h4>Rap</h4>
+                      <p>O rap é uma combinação de ritmos com uma forte expressão nas letras. Usado para dar opiniões e denunciar situações sociais, o estilo musical vem ganhando força e espaço nos últimos anos, principalmente no cenário nacional.
+
+Sendo uma vertente do hip hop, o rap tem uma origem de luta e resistência. </p>
+                      
+                    </div>
+                  </div>
+                  <div class="col-lg-4 align-self-center">
+                    <ul>
+                      <li  style="color: white">Ano de criação: <span>1960</span></li>
+                      <li  style="color: white">Criador: <span> DJ Kool Herc</span></li>
+                      <li  style="color: white">País origem: <span>Jamaica </span></li>
+                      <li> <span></span></li>
+                    </ul>
+                  </div>
+                </div>
+                <center>
+               <div class="col-lg-12">
+                  <div class="main-button">
+                  <a href="genero.html">Gêneros</a>
+                </div>
+				</center>
+              </div>
+            </div>
+          </div>
+          <!-- ***** api End ***** -->
+
+          <!-- ***** iframe Start ***** -->
+          <div class="gaming-library profile-library">
+            <div class="col-lg-12">
+              <div class="heading-section">
+                <h4><em>Playlists de</em> Rap</h4>
+              </div>
+              <!-- aqui-->
+              <div class="embed-spotify">
+                <div class="col-lg-12">
+                  <script src="https://open.spotify.com/embed-podcast/iframe-api/v1" async></script>
+                  <div id="embed-iframe"></div>
+                      <div class="main-button">
+                          <button class="main-button" data-spotify-id="spotify:playlist:2SQGyGLFUVtp7251qJkNnc">
+                              Segunda playlist
+                          </button>
+                          <button class="main-button" data-spotify-id="spotify:playlist:78la5xeGG47iunK9E4OYkk">
+                              primeira playlist
+                          </button>
+                      </div>
+                  <script type="text/javascript">
+                  window.onSpotifyIframeApiReady = (IFrameAPI) => {
+                    const element = document.getElementById('embed-iframe');
+                    const options = {
+                        width: '100%',
+                        height: '375px',
+                        uri: 'spotify:playlist:78la5xeGG47iunK9E4OYkk'
+                    };
+                    const callback = (EmbedController) => {
+                        document.querySelectorAll('.main-button').forEach(
+                            episode => {
+                                episode.addEventListener('click', () => {
+                                    EmbedController.loadUri(episode.dataset.spotifyId)
+                                });
+                            })
+                    };
+                    IFrameAPI.createController(element, options, callback);
+                };
+              </script>
+              </div>
+              </div>
+            </div>
+          </div>
+          <!-- ***** iframe End ***** -->
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <p>Copyright © 2023 <a href="#">Cyborg </a>. Todos os direitos reservados. - Site para uso acadêmico.
+          
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/tabs.js"></script>
+  <script src="assets/js/popup.js"></script>
+  <script src="assets/js/custom.js"></script>
+
+
+  </body>
+
+</html>
